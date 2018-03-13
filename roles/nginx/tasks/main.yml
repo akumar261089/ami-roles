@@ -9,8 +9,8 @@
   - build
 
 - name: Install packages
-  package: name={{ item }} state=latest
-  with_items: packages
+  yum: name={{ item }} state=latest
+  with_items: nginx
   when: ansible_os_family == 'RedHat'
   tags:
   - system

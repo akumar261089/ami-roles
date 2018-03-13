@@ -39,7 +39,7 @@
   command: >
     java -jar {{ jenkins_jar_location }} -s http://{{ jenkins_hostname }}:8080/ install-plugin {{ item }}
     creates=/var/lib/jenkins/plugins/{{ item }}.jpi
-  with_items: jenkins_plugins
+  with_items: "{{ jenkins_plugins }}"
   notify: restart jenkins
   tags:
   - config

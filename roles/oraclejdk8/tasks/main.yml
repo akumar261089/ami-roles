@@ -42,3 +42,14 @@
     - build
     - java-config
     - facts
+
+- name: Remove java alternate link
+  file: 
+    path: /etc/alternatives/java
+    state: absent
+
+- name: Create new link
+  file: 
+    src: /opt/apps/java/jdk8/bin/java
+    dest: /etc/alternatives/java
+    state: link

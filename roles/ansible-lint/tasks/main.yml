@@ -14,3 +14,10 @@
     - build
     - system
     - ansible-lint
+
+- name: Pip install ansible
+  pip: name=ansible
+  tags:
+    - build
+    - system
+    - ansible-lint

@@ -7,4 +7,4 @@ export JAVA_HOME={{ java_home }}
 export JAVA_DEFAULT={{ java_default }}
 export JAVA_PATH=$JAVA_HOME
 
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:/$JAVA_HOME/bin
